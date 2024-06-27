@@ -4,11 +4,10 @@
 let candidateName = "";
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-/*
+
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
-*/
 
 //TODO: Variables for Part 2
 let questions = [
@@ -36,8 +35,8 @@ function askForName() {
   console.log("Hello, " + candidateName)
 }
 
-askForName()
-
+//askForName()
+/*
 for (let i=0; i<5; i++) {
   const input = require('readline-sync');
   answer = input.question(questions[i]);
@@ -49,10 +48,25 @@ for (let i=0; i<5; i++) {
 for (let i=0; i<5; i++) {
   console.log(`The answer to question ${i+1} is ${correctAnswers.slice(i,i+1)}.  \nYour answer was ${candidateAnswers.slice(i,i+1)}.`);
   }
+*/
 
-/*
    // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 function askQuestion() {
+  for (let i=0; i<5; i++) {
+  const input = require('readline-sync');
+  answer = input.question(questions[i]);
+  candidateAnswers.push(answer);
+  }
+  
+//console.log(candidateAnswers);
+
+for (let i=0; i<5; i++) {
+  console.log(`The answer to question ${i+1} is ${correctAnswers.slice(i,i+1)}.  \nYour answer was ${candidateAnswers.slice(i,i+1)}.`);
+  }
+} 
+
+/*
+{
   const input = require('readline-sync');
   candidateAnswer = input.question("Who was the first woman in space? ");  
 
@@ -67,11 +81,11 @@ else{console.log("Nope.")
 }
 }
 
-
-askQuestion()
+ */
+//askQuestion()
 
   console.log
- */
+
 
 
 
