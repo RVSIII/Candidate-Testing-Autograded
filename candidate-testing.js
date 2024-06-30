@@ -58,11 +58,11 @@ function askQuestion() {
   candidateAnswers.push(answer);
   }
   
-//console.log(candidateAnswers);
-
 for (let i=0; i<5; i++) {
   console.log(`The answer to question ${i+1} is ${correctAnswers.slice(i,i+1)}.  \nYour answer was ${candidateAnswers.slice(i,i+1)}.`);
   }
+// console.log(candidateAnswers)
+// console.log(correctAnswers)
 } 
 
 /*
@@ -84,23 +84,41 @@ else{console.log("Nope.")
  */
 //askQuestion()
 
-  console.log
-
-
-
-
+console.log(" \n ");
 
 function gradeQuiz(candidateAnswers) {
+ 
+let answeredCorrectly = [];
 
-  
+candidateAnswers = candidateAnswers.join(",").toUpperCase().split(",");
+//console.log(candidateAnswers);
 
-
-
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
-
-  return grade;
+correctAnswers = correctAnswers.join(",").toUpperCase().split(",");
+//console.log(correctAnswers);
+ 
+for (let i = 0; i >= 0 && i <= 4; i++) {
+  if (candidateAnswers[i] === correctAnswers[i]) {
+     answeredCorrectly.push("Question"+[i+1])
+  }
 }
+  let grade = answeredCorrectly.length / 5 * 100;
+
+console.log(grade);
+
+  if (grade < 80) {
+    console.log(`Your final score is ${grade}.  You failed.  You have brought great shame upon yourself, your family, and your ancestors and descendents for all time`)
+ } else {
+    console.log(`Your final score is ${grade}. Expectations met.`)
+ }
+ return grade
+}
+
+
+
+ 
+//  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
+//  return grade;
+
 
 function runProgram() {
   askForName();
